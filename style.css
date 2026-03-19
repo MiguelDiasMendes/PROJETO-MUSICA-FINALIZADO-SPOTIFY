@@ -1,0 +1,172 @@
+/* serve para importar fontes especificas */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* fundo agora com um tom azul marinho bem escuro para aparecer um app de musicas */
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    /* vh viewport heigth */
+  background: linear-gradient(to right, black , rgba(0, 128, 0, 0.834));
+  flex-direction: column;
+}
+/* Header */
+.cabeçalho{
+    text-align: center;
+    padding: 40px 20px 20px;
+    color: white;
+}
+.banner h1{ 
+font-size: 2.5rem;
+margin-bottom: 10px;
+letter-spacing: 1px;
+}
+.banner p{
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+/* NAVBAR */
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3;
+}
+.navbar a:hover{ 
+    color: white;
+}
+/* parte principal-MAIN */
+.main{
+    padding: 40px 20px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: 1200px;
+    margin: 0 autos;
+    }
+
+.container .card{
+position: relative;
+width: 300px;
+height: 440px;
+/* sombras ajustadas para o brilho sutil azulado */
+box-shadow: inset 5px 5px 5px #00000000, inset -5px -5px 15px green;
+border-radius: 15px;
+margin: 30px;
+}
+
+.container .card .box{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #626262;
+    border-radius: 15px;
+    border: 1px solid #363636;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+/* Gradiente musica neon no hover (roxinho pra cianinho de três cabeças amarelas) */
+.container .card:hover .box{
+    transform: translateY(-50px);
+    background: linear-gradient(60deg,  #363636, rgba(0, 128, 0, 0.637));
+    box-shadow: 0 15px 35px rgba (142, 45, 226, 0.4);
+}
+
+.container .card .box .content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilização do ícone musical */
+.container .card .box .content .icon {
+    font-size: 4em;
+    color: #f8f8f8; /* Cor inicial roxa */
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+/* No hover, o ícone fica branco para destacar no gradiente */
+.container .card:hover .box .content .icon {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.container .card .box .content h2 {
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.03);
+    pointer-events: none;
+}
+
+.container .card .box .content h3 {
+    font-size: 1.8em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.container .card .box .content p {
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #a0a0a0;
+    line-height: 1.6;
+    transition: 0.5s;
+}
+
+.container .card:hover .box .content p {
+    color: #eee;
+}
+
+/* Botão de play estilizado */
+.container .card .box .content a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 25px;
+    background: #fff; /* Botão branco para contraste */
+    margin-top: 20px;
+    border-radius: 30px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.container .card:hover .box .content a {
+    background: #000000; /* Muda para ciano no hover */
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.644);
+}
+
+.footer{
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
